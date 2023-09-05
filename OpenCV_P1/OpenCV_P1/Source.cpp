@@ -3,12 +3,12 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include <iostream>
-#include <fstream>
-
+#include <filesystem>
 #include "HistogramImage.h"
+#include "OpenImage.h"
 
 int main() {
-	std::cout << "Hello Héctor" << "\n";
-	
+	std::cout << "Hello Héctor" << std::endl;
+
 	return 0;
 }
