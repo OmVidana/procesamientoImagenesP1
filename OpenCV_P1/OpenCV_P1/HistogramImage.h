@@ -1,4 +1,5 @@
 #pragma once
+
 #include "opencv2/opencv.hpp"
 #include "opencv2/core/core.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
@@ -7,7 +8,6 @@
 class HistogramDisplayer
 {
 public:
-
 	HistogramDisplayer(std::string pathFile);
 	void setWindowName(std::string name);
 	void setInputImage(std::string path);
