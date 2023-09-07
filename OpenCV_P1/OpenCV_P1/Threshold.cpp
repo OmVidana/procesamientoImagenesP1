@@ -2,8 +2,7 @@
 
 cv::Mat binaryThreshold(cv::Mat inputImage, int thresholdValue)
 {
-	cv::Mat outputImage;
-	cv::cvtColor(inputImage, outputImage, cv::COLOR_BGR2GRAY);
+	cv::Mat outputImage(inputImage.rows, inputImage.cols, CV_8U);
 
 	for (int x = 0; x < inputImage.cols; x++)
 	{
@@ -20,8 +19,7 @@ cv::Mat binaryThreshold(cv::Mat inputImage, int thresholdValue)
 
 cv::Mat binaryInverseThreshold(cv::Mat inputImage, int thresholdValue)
 {
-	cv::Mat outputImage;
-	cv::cvtColor(inputImage, outputImage, cv::COLOR_BGR2GRAY);
+	cv::Mat outputImage(inputImage.rows, inputImage.cols, CV_8U);
 
 	for (int x = 0; x < inputImage.cols; x++)
 	{
@@ -38,8 +36,7 @@ cv::Mat binaryInverseThreshold(cv::Mat inputImage, int thresholdValue)
 
 cv::Mat truncatedThreshold(cv::Mat inputImage, int thresholdValue)
 {
-	cv::Mat outputImage;
-	cv::cvtColor(inputImage, outputImage, cv::COLOR_BGR2GRAY);
+	cv::Mat outputImage(inputImage.rows, inputImage.cols, CV_8U);
 
 	for (int x = 0; x < inputImage.cols; x++)
 	{
@@ -57,8 +54,7 @@ cv::Mat truncatedThreshold(cv::Mat inputImage, int thresholdValue)
 
 cv::Mat toZeroThreshold(cv::Mat inputImage, int thresholdValue)
 {
-	cv::Mat outputImage;
-	cv::cvtColor(inputImage, outputImage, cv::COLOR_BGR2GRAY);
+	cv::Mat outputImage(inputImage.rows, inputImage.cols, CV_8U);
 
 	for (int x = 0; x < inputImage.cols; x++)
 	{
@@ -76,8 +72,7 @@ cv::Mat toZeroThreshold(cv::Mat inputImage, int thresholdValue)
 
 cv::Mat toZeroInverseThreshold(cv::Mat inputImage, int thresholdValue)
 {
-	cv::Mat outputImage;
-	cv::cvtColor(inputImage, outputImage, cv::COLOR_BGR2GRAY);
+	cv::Mat outputImage(inputImage.rows, inputImage.cols, CV_8U);
 
 	for (int x = 0; x < inputImage.cols; x++)
 	{

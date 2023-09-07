@@ -28,21 +28,20 @@ std::pair<cv::Mat, std::string> readImage(std::string path)
 	return std::make_pair(cv::Mat(), "No Image");
 }
 
-int openImage(cv::Mat inputImage, std::string fileName) {
+int openImage(cv::Mat inputImage, std::string fileName, double scale, int waitTime) {
 	cv::namedWindow(fileName, cv::WINDOW_NORMAL);
-	
+
 	if (inputImage.empty())
 	{
-		std::cout << "Test" << std::endl;
 		std::cerr << "There is no Image to load." << std::endl;
 		return -1;
 	}
-
+	cv::resizeWindow(fileName, static_cast<int>(inputImage.cols * scale), static_cast<int>(inputImage.rows * scale));
 	cv::imshow(fileName, inputImage);
-	cv::waitKey(0);
+	cv::waitKey(waitTime);
 
-	inputImage.deallocate();
-	cv::destroyWindow(fileName);
+	//inputImage.deallocate();
+	//cv::destroyWindow(fileName);
 
 	return 0;
 }

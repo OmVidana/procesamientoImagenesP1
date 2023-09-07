@@ -8,4 +8,4 @@
 
 cv::Mat createImage(int width, int height, int type);
 std::pair<cv::Mat, std::string> readImage(std::string path);
-int openImage(cv::Mat inputImage, std::string fileName);
+int openImage(cv::Mat inputImage, std::string fileName, double scale, int waitTime);
